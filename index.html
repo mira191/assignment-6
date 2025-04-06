@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Style for the Active Lesson Button */
+        .active-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-white text-gray-800 min-h-screen box-border">
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav id="navbar" class="hidden">
+            <div class="flex justify-between items-center bg-gray-100 px-10 py-4 border-b fixed w-full">
+                <div class="flex justify-center items-center gap-2">
+                    <h1 class="font-extrabold">ENGLISH</h1>
+                    <img src="assets/logo.png" alt="Logo">
+                    <h1 class="font-extrabold">Janala</h1>
+                </div>
+                <div class="flex justify-center items-center gap-4">
+                    <button id="faqBtn"
+                        class="font-bold text-blue-800 flex border-2 border-blue-500 p-2 rounded-sm transition-transform active:scale-90 hover:bg-blue-800 hover:text-white"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="Blue" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                        </svg>FAQ</button>
+                    <button id="learnBtn"
+                        class="font-bold text-blue-800 flex border-2 border-blue-500 p-2 rounded-sm transition-transform active:scale-90 hover:bg-blue-800 hover:text-white"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="Blue" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                        </svg>Learn</button>
+                    <button id="logOutBtn"
+                        class="font-bold text-blue-800 flex border-2 border-blue-500 p-2 rounded-sm transition-transform active:scale-90 hover:bg-blue-800 hover:text-white"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>Logout</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Banner Section -->
+        <section id="banner">
+            <div class="flex justify-center items-center p-20">
+                <div class="flex flex-col gap-5 w-full">
+                    <h1 class="text-5xl font-extrabold"><span class="text-blue-500">English</span> is Easy!!</h1>
+                    <p class="font-semibold">আজ থেকেই আপনারা ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা<br>আপনার
+                        দক্ষতা বাড়াতে চান,
+                        আমাদের
+                        Interactive Lessons আপনাকে নিয়ে<br>যাবে অন্য একটি Level এ</p>
+                    <input type="text" placeholder="Enter your name"
+                        class="border border-gray-300 p-2 rounded-md w-64" />
+                    <input id="password" type="password" placeholder="Enter your password (123456)"
+                        class="border border-gray-300 p-2 rounded-md w-64" />
+                    <button id="getStartedBtn"
+                        class="bg-blue-500 text-white p-2 rounded-md w-36 hover:bg-blue-600 transition-transform active:scale-90">
+                        Get Started
+                    </button>
+                </div>
+                <div>
+                    <img src="assets/hero-student.png" alt="Student">
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <!-- Let's Learn Vocabularies Section -->
+        <section id="learnSection" class="hidden">
+            <div class="flex flex-col justify-center items-center gap-10 p-20">
+                <h1 class="text-4xl font-extrabold">
+                    <span class="text-blue-500">Let's</span> Learn Vocabularies
+                </h1>
+                <!-- Buttons for Lesson -->
+                <div id="buttons-container" class="mb-4"></div>
+
+                <!-- API Data Loading Animation -->
+                <div id="loading-spinner" class="hidden text-center">
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid mx-auto">
+                    </div>
+                </div>
+                <!-- Section to Display Lesson Content From API -->
+                <div id="vocabulary-section" class="p-6 bg-gray-100 rounded shadow-md w-full">
+                    <p id="default-text" class="bg-gray-100 w-full p-20 rounded-3xl flex flex-col items-center gap-5">
+                        আপনি এখনো কোন Lesson Select করেন নি?<br><span class="font-bold text-3xl">একটি Lesson Select
+                            করুন</span></p>
+                    <div id="words-container" class="mt-2"></div>
+                    <!-- API Words will be Displayed Here -->
+                </div>
+            </div>
+            <!-- Modal for Word Details API -->
+            <div id="word-details-modal"
+                class="fixed inset-0 backdrop-blur-xl bg-opacity-50 hidden place-content-center">
+                <div class="flex justify-center items-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg w-96">
+                        <h2 id="modal-word" class="text-2xl font-bold mb-2"></h2>
+                        <p id="modal-pronunciation" class="text-gray-600 mb-4"></p>
+                        <p id="modal-sentence" class="mb-4"></p>
+                        <p id="modal-synonyms" class="mb-4"></p>
+                        <button id="complete-learning" class="bg-blue-500 text-white px-4 py-2 rounded-xl">Complete
+                            Learning</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section id="faqSection" class="hidden">
+            <div class="space-y-4 p-20">
+                <h1 class="font-bold text-4xl text-center"><span class="text-blue-500">Frequently</span> Asked Questions
+                </h1>
+                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                        <h2 class="font-medium">What is the differences between <code>var</code>, <code>let</code> and
+                            <code>const</code>?
+                        </h2>
+                        <svg class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+                        1. The difference between var, let, and const <br>
+                        var: Old way of declaring variables, function-scoped, can be redeclared. <br>
+                        let: Block-scoped, can't be redeclared but can be updated. <br>
+                        const: Block-scoped, can't be redeclared or updated (but objects & arrays can be modified).
+                    </p>
+                </details>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                        <h2 class="font-medium">What is the differences between <code>map()</code>,
+                            <code>forEach()</code>
+                            and <code>filter()</code>?
+                        </h2>
+
+                        <svg class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+                        2. The difference between map(), forEach(), and filter() <br>
+                        map(): Returns a new array after modifying each element. <br>
+                        forEach(): Loops through each element but doesn’t return a new array. <br>
+                        filter(): Returns a new array with elements that meet a condition.
+                    </p>
+                </details>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                        <h2 class="font-medium">What are arrow functions, and how are they different from regular
+                            functions?
+                        </h2>
+                        <svg class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+                        3. Arrow functions vs. Regular functions <br>
+                        Arrow functions (=>): Shorter syntax, don’t have their own this, and can’t be used as
+                        constructors.
+                        <br>
+                        Regular functions: Have their own this and can be used with new.
+                    </p>
+                </details>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                        <h2 class="font-medium">How do JavaScript Promises work?</h2>
+                        <svg class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+                        4. How JavaScript Promises work <br>
+                        A Promise is like a guarantee that a task (like fetching data) will complete in the future. It
+                        has
+                        three states:
+                        Pending (waiting)
+                        Resolved (successful)
+                        Rejected (failed).
+                    </p>
+                </details>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                        <h2 class="font-medium">How does closure work in JavaScript?</h2>
+                        <svg class="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+                        5. How closures work in JavaScript <br>
+                        A closure happens when a function remembers variables from its outer scope even after the outer
+                        function has finished running.
+                    </p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t-2 p-20">
+        <div class="flex justify-between items-center">
+            <div class="space-y-4">
+                <div class="flex gap-1">
+                    <h1 class="font-bold">English</h1>
+                    <img src="assets/logo.png" alt="Logo">
+                    <h1 class="font-bold">জানালা</h1>
+                </div>
+                <div>
+                    <h1 class="font-bold">ইংরেজি শিখুন সহজে</h1>
+                    <h1>Providing ED-Tech Applications since 2025</h1>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <h1>FOLLOW US</h1>
+                <div class="flex gap-2 justify-center items-center">
+                    <a href="https://www.facebook.com/groups/targetwebdevcareer" target="_blank"><img
+                            class="transition-transform active:scale-90" src="assets/fb-thumb.png"
+                            alt="Facebook-Logo"></a>
+                    <a href="https://www.youtube.com/@ProgrammingHeroCommunity" target="_blank"><img
+                            class="transition-transform active:scale-90" src="assets/youtube-thumb.png"
+                            alt="YouTube-Logo"></a>
+                    <a href="https://www.instagram.com/programminghero/" target="_blank"><img
+                            class="transition-transform active:scale-90" src="assets/instagram-thumb.png"
+                            alt="Instagram-Logo"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</html>
+
+<script src="script.js"></script>
+</body>
+
+</html>
